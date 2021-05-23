@@ -1,17 +1,11 @@
 $timing        : 265ms;
-$iconColor     : color(secondary, 1);
-$accent        : color(primary, 2);
-$grape         : color(primary, 1);
-$orchid        : color(secondary, 2);
+$grape         : color(primary, 2);
+$orchid        : color(primary, 1);
 
 @mixin transformScale($size: 1) {
 	transform: scale($size);
 	-ms-transform: scale($size);
 	-webkit-transform: scale($size);
-}
-
-body {
-	background-color: rgba($iconColor, 0.05);
 }
 
 .social-container {
@@ -20,10 +14,9 @@ body {
 	text-align: center;
 }
 
-.social-icons {
+.social-list {
 	padding: 0;
 	list-style: none;
-	margin: 1em;
 
 	li {
 		display: inline-block;
@@ -33,11 +26,13 @@ body {
 
 	}
 
-	i {
+	svg {
+		width: 20px;
+		height: 20px;
 		color: #fff;
 		position: absolute;
 		top: 21px;
-		left: 21px;
+		left: 19px;
 		transition: all $timing ease-out;
 	}
 
@@ -49,10 +44,10 @@ body {
 			content: " ";
 			width: 60px;
 			height: 60px;
-			border-radius: 100%;
 			display: block;
-			background: linear-gradient(45deg, $iconColor, $accent);
 			transition: all $timing ease-out;
+			background: linear-gradient(45deg, $grape, $orchid);
+			border-radius: 0;
 		}
 
 		&:hover:before {
@@ -60,35 +55,11 @@ body {
 			transition: all $timing ease-in;
 		}
 
-		&:hover i {
-			@include transformScale(2.2);
-			color: $iconColor;
-			background: -webkit-linear-gradient(45deg, $iconColor, $accent);
+		&:hover svg {
+			@include transformScale(2);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 			transition: all $timing ease-in;
-		}
-	}
-
-	a.social-square {
-
-		&:before {
-			background: linear-gradient(45deg, $grape, $orchid);
-			border-radius: 10%;
-		}
-
-		&:hover:before {
-			transform: rotate(-180deg);
-			-ms-transform: rotate(-180deg);
-			-webkit-transform: scale(-180deg);
-			border-radius: 100%;
-		}
-
-		&:hover i {
-			@include transformScale(1.6);
-			color: #fff;
-			transform: scale(1.6);
-			-webkit-text-fill-color: #fff;
 		}
 	}
 }
