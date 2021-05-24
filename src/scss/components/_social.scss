@@ -17,13 +17,16 @@ $orchid        : color(primary, 1);
 .social-list {
 	padding: 0;
 	list-style: none;
+	margin-top: 16px;
 
 	li {
 		display: inline-block;
-		margin: 0.15em;
 		position: relative;
 		font-size: 1.2em;
 
+		& + li {
+			margin-left: 12px;
+		}
 	}
 
 	svg {
@@ -31,8 +34,8 @@ $orchid        : color(primary, 1);
 		height: 20px;
 		color: #fff;
 		position: absolute;
-		top: 21px;
-		left: 19px;
+		top: 5px;
+		left: 5px;
 		transition: all $timing ease-out;
 	}
 
@@ -42,8 +45,8 @@ $orchid        : color(primary, 1);
 		&:before {
 			@include transformScale();
 			content: " ";
-			width: 60px;
-			height: 60px;
+			width: 30px;
+			height: 30px;
 			display: block;
 			transition: all $timing ease-out;
 			background: linear-gradient(45deg, $grape, $orchid);
@@ -56,7 +59,7 @@ $orchid        : color(primary, 1);
 		}
 
 		&:hover svg {
-			@include transformScale(2);
+			@include transformScale(1);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 			transition: all $timing ease-in;
