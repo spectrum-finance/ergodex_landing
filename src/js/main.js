@@ -120,7 +120,7 @@
       name: 'Dmitriy Usov',
       role: 'Lead UI Developer',
       profile: `
-        Software Engineer, ex. Frontend Team Lead at CityMobil, JavaScript developer at Chatfuel
+        Software Engineer, Core developer of Ergo, ex. Frontend Team Lead at CityMobil, degree in computer science
       `,
       photo: 'usov',
       links: {
