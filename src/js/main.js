@@ -88,4 +88,30 @@
       150
     ))
   }
+
+  // const TEAM = [
+  //   {
+  //     name: 'Yasha Black',
+  //     role: 'Product manager',
+  //     profile: `
+  //
+  //     `,
+  //     links: {
+  //       linkedin: '',
+  //       telegram: ''
+  //     },
+  //     photo: ''
+  //   }
+  // ]
+  //
+  // const teamBlock = document.querySelector('.team')
+  // console.log('hello')
+  // TEAM.forEach((tm) => {
+  //   const name = document.createElement('h4')
+  //   name.className = ''
+  //   name.textContent = tm.name
+  //
+  //   teamBlock
+  //     .appendChild(name)
+  // })
 }())
