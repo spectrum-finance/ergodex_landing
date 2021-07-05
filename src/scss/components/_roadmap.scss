@@ -1,12 +1,6 @@
 $line_duration: 5s;
 $line_gradient: linear-gradient(65deg, color(primary, 1) 0, color(primary, 2) 100%);
 
-@mixin resetList {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
 .roadmap {
 	&__container {
 		position: relative;
@@ -46,11 +40,12 @@ $line_gradient: linear-gradient(65deg, color(primary, 1) 0, color(primary, 2) 10
 	}
 
 	&__stage {
-		display: flex;
+		display: grid;
+		grid-template-columns: 30px 1fr;
 		margin-bottom: 20px;
 
 		& .stage-content {
-			margin-left: 30px;
+			margin-left: 1.5em;
 
 			&__title {
 				font-weight: bold;
@@ -67,7 +62,8 @@ $line_gradient: linear-gradient(65deg, color(primary, 1) 0, color(primary, 2) 10
 				position: relative;
 				padding-left: 30px;
 				font-size: 16px;
-				line-height: 22px;
+				line-height: 28px;
+				color: #fff;
 
 				&:before {
 					content: '';
@@ -76,13 +72,18 @@ $line_gradient: linear-gradient(65deg, color(primary, 1) 0, color(primary, 2) 10
 					left: 0;
 					width: 15px;
 					height: 15px;
-					margin-top: 3px;
+					margin-top: 6px;
 					border-radius: 50%;
-					border: 2px solid #768696;
+					border: 2px solid #fff;
+				}
+
+				&.done:before {
+					border-color: #768696;
 				}
 
 				&.done {
 					text-decoration: line-through;
+					color: #768696;
 				}
 
 				&.done:after {
@@ -93,7 +94,7 @@ $line_gradient: linear-gradient(65deg, color(primary, 1) 0, color(primary, 2) 10
 					border-width: 0 0 2px 2px;
 					height: 5px;
 					width: 10px;
-					top: 6px;
+					top: 9px;
 					left: 5px;
 				}
 			}
@@ -125,12 +126,6 @@ $line_gradient: linear-gradient(65deg, color(primary, 1) 0, color(primary, 2) 10
 				animation: pulse 2000ms infinite;
 				background: $line_gradient;
 				border: none;
-			}
-
-			.stage-content {
-				&__title {
-					color: $line_gradient;
-				}
 			}
 		}
 	}
