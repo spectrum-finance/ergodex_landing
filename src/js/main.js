@@ -104,19 +104,6 @@
       }
     },
     {
-      name: 'Yasha Black',
-      role: 'Product Manager',
-      profile: `
-        Product manager at Ergo, UI Engineer at Mail.ru Group, Masters degree in management
-      `,
-      photo: 'black',
-      links: {
-        linkedin: 'https://www.linkedin.com/in/yasha-black-25852018a/',
-        telegram: 'https://t.me/yashablack',
-        github: 'https://github.com/yasha-black'
-      }
-    },
-    {
       name: 'Dmitriy Usov',
       role: 'Lead UI Developer',
       profile: `
@@ -127,6 +114,19 @@
         linkedin: '',
         telegram: '',
         github: 'https://github.com/deadit'
+      }
+    },
+    {
+      name: 'Yasha Black',
+      role: 'Product Manager',
+      profile: `
+        Product manager at Ergo, UI Engineer at Mail.ru Group, Masters degree in management
+      `,
+      photo: 'black',
+      links: {
+        linkedin: 'https://www.linkedin.com/in/yasha-black-25852018a/',
+        telegram: 'https://t.me/yashablack',
+        github: 'https://github.com/yasha-black'
       }
     },
     {
@@ -143,19 +143,6 @@
       }
     },
     {
-      name: 'Vadim Safonov',
-      role: 'Frontend Developer',
-      profile: `
-        Software Engineer, Team lead at Rbc.ru. Bachelor degree in computer science
-      `,
-      photo: 'safonov',
-      links: {
-        linkedin: '',
-        telegram: '',
-        github: 'https://github.com/imamatory'
-      }
-    },
-    {
       name: 'Alexander Romanovskiy',
       role: 'Core developer',
       profile: `
@@ -166,6 +153,19 @@
         linkedin: '',
         telegram: '',
         github: 'https://github.com/Bromel777'
+      }
+    },
+    {
+      name: 'Vadim Safonov',
+      role: 'Frontend Developer',
+      profile: `
+        Software Engineer, Team lead at Rbc.ru. Bachelor degree in computer science
+      `,
+      photo: 'safonov',
+      links: {
+        linkedin: '',
+        telegram: '',
+        github: 'https://github.com/imamatory'
       }
     }
   ]
