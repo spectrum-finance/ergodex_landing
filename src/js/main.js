@@ -88,4 +88,132 @@
       150
     ))
   }
+
+  const TEAM = [
+    {
+      name: 'Ilya Oskin',
+      role: 'Lead Core Developer',
+      profile: `
+        Software Engineer, Core Developer of Ergo, Lead Developer at Mail.ru Group
+      `,
+      photo: 'oskin',
+      links: {
+        linkedin: '',
+        telegram: '',
+        github: 'https://github.com/oskin1'
+      }
+    },
+    {
+      name: 'Yasha Black',
+      role: 'Product Manager',
+      profile: `
+        Product manager at Ergo, UI Engineer at Mail.ru Group, Masters degree in management
+      `,
+      photo: 'black',
+      links: {
+        linkedin: 'https://www.linkedin.com/in/yasha-black-25852018a/',
+        telegram: 'https://t.me/yashablack',
+        github: 'https://github.com/yasha-black'
+      }
+    },
+    {
+      name: 'Dmitriy Usov',
+      role: 'Lead UI Developer',
+      profile: `
+        Software Engineer, Core developer of Ergo, ex. Frontend Team Lead at CityMobil, degree in computer science
+      `,
+      photo: 'usov',
+      links: {
+        linkedin: '',
+        telegram: '',
+        github: 'https://github.com/deadit'
+      }
+    },
+    {
+      name: 'Timofey Gusev',
+      role: 'Core Developer',
+      profile: `
+        Software Engineer, Developer at Mail.ru Group, FP enthusiast, ex. Blockchain Core Dev., scientific degree in cyber security
+      `,
+      photo: 'gusev',
+      links: {
+        linkedin: '',
+        telegram: '',
+        github: 'https://github.com/GusevTimofey'
+      }
+    },
+    {
+      name: 'Vadim Safonov',
+      role: 'Frontend Developer',
+      profile: `
+        Software Engineer, Team lead at Rbc.ru. Bachelor degree in computer science
+      `,
+      photo: 'safonov',
+      links: {
+        linkedin: '',
+        telegram: '',
+        github: 'https://github.com/imamatory'
+      }
+    },
+    {
+      name: 'Alexander Romanovskiy',
+      role: 'Core developer',
+      profile: `
+        Software engineer. One of the creators of Encry blockchain and smart contract language Prism. FP enthusiast. Has expertise in cybersecurity. Ergo ecosystem developer
+      `,
+      photo: 'romanovsky',
+      links: {
+        linkedin: '',
+        telegram: '',
+        github: 'https://github.com/Bromel777'
+      }
+    }
+  ]
+
+  const getTeamMemberTemplate = ({
+    name,
+    role,
+    profile,
+    photo,
+    links
+  }) => {
+    const linksHTML = Object.keys(links).reduce((acc, key) => {
+      const template = `
+        <a class="team__link" href="${links[key]}" target="_blank">
+            <img src="./src/assets/${key}.svg" alt="${key}">
+        </a>`.trim()
+
+      if (links[key]) return acc + template
+
+      return acc
+    }, '')
+
+    return `
+      <li class="team__member">
+        <div class="team__title-container">
+          <div class="team__img-container">
+            <img src="./src/assets/img/${photo}.jpeg" alt="${name}">
+          </div>
+          <div class="team__name-container">
+            <h4 class="team__name">${name}</h4>
+            <sub class="team__role">${role}</sub>
+            <div class="team__links">
+                ${linksHTML}
+            </div>
+          </div>
+        </div>
+
+        <div class="team__member-profile">
+            ${profile}
+        </div>
+      </li>
+    `.trim()
+  }
+
+  const container = document.querySelector('.team__members')
+
+  const teamTemplate = TEAM
+    .reduce((acc, tm) => acc + getTeamMemberTemplate(tm), '')
+
+  container.insertAdjacentHTML('afterbegin', teamTemplate)
 }())
