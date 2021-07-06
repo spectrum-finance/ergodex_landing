@@ -92,7 +92,7 @@
   const TEAM = [
     {
       name: 'Ilya Oskin',
-      role: 'Lead Core Developer',
+      role: 'Lead Developer',
       profile: `
         Software Engineer, Core Developer of Ergo, Lead Developer at Mail.ru Group, Degree in Economics.
       `,
