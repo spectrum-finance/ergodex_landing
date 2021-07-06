@@ -94,7 +94,7 @@
       name: 'Ilya Oskin',
       role: 'Lead Core Developer',
       profile: `
-        Software Engineer, Core Developer of Ergo, Lead Developer at Mail.ru Group
+        Software Engineer, Core Developer of Ergo, Lead Developer at Mail.ru Group, Degree in Economics.
       `,
       photo: 'oskin',
       links: {
@@ -107,7 +107,7 @@
       name: 'Dmitriy Usov',
       role: 'Lead UI Developer',
       profile: `
-        Software Engineer, Core developer of Ergo, ex. Frontend Team Lead at CityMobil, degree in computer science
+        Software Engineer, Developer of Ergo, ex. Frontend Team Lead at CityMobil, Degree in computer science
       `,
       photo: 'usov',
       links: {
@@ -133,7 +133,7 @@
       name: 'Timofey Gusev',
       role: 'Core Developer',
       profile: `
-        Software Engineer, Developer at Mail.ru Group, FP enthusiast, ex. Blockchain Core Dev., scientific degree in cyber security
+        Software Engineer, Developer at Mail.ru Group, FP enthusiast, ex. Blockchain Core Dev., Degree in cyber security
       `,
       photo: 'gusev',
       links: {
@@ -159,7 +159,7 @@
       name: 'Vadim Safonov',
       role: 'Frontend Developer',
       profile: `
-        Software Engineer, Team lead at Rbc.ru. Bachelor degree in computer science
+        Software Engineer, Team lead at Rbc.ru. Degree in computer science
       `,
       photo: 'safonov',
       links: {
