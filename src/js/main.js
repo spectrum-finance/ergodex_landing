@@ -131,7 +131,7 @@
     },
     {
       name: 'Timofey Gusev',
-      role: 'Core Developer',
+      role: 'Core Developer: Plutus, Haskell',
       profile: `
         Software Engineer, Developer at Mail.ru Group, FP enthusiast, ex. Blockchain Core Dev., scientific degree in cyber security
       `,
@@ -144,7 +144,7 @@
     },
     {
       name: 'Alexander Romanovskiy',
-      role: 'Core developer',
+      role: 'Core developer: Plutus, Haskell',
       profile: `
         Software engineer. One of the creators of Encry blockchain and smart contract language Prism. FP enthusiast. Has expertise in cybersecurity. Ergo ecosystem developer
       `,
