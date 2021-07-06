@@ -107,7 +107,7 @@
       name: 'Dmitriy Usov',
       role: 'Lead UI Developer',
       profile: `
-        Software Engineer, Developer of Ergo, ex. Frontend Team Lead at CityMobil, Degree in computer science
+        Software Engineer, Developer of Ergo, ex. Frontend Team Lead at CityMobil, Degree in computer science.
       `,
       photo: 'usov',
       links: {
@@ -120,7 +120,7 @@
       name: 'Yasha Black',
       role: 'Product Manager',
       profile: `
-        Product manager at Ergo, UI Engineer at Mail.ru Group, Masters degree in management
+        Product manager at Ergo, UI Engineer at Mail.ru Group, Masters degree in management.
       `,
       photo: 'black',
       links: {
@@ -133,7 +133,7 @@
       name: 'Timofey Gusev',
       role: 'Core Developer',
       profile: `
-        Software Engineer, Developer at Mail.ru Group, FP enthusiast, ex. Blockchain Core Dev., Degree in cyber security
+        Software Engineer, Developer at Mail.ru Group, FP enthusiast, ex. Blockchain Core Dev., Degree in cyber security.
       `,
       photo: 'gusev',
       links: {
@@ -146,7 +146,7 @@
       name: 'Alexander Romanovskiy',
       role: 'Core developer',
       profile: `
-        Software engineer. One of the creators of Encry blockchain and smart contract language Prism. FP enthusiast. Has expertise in cybersecurity. Ergo ecosystem developer
+        Software engineer. One of the creators of Encry blockchain and smart contract language Prism. FP enthusiast. Has expertise in cybersecurity. Ergo ecosystem developer.
       `,
       photo: 'romanovsky',
       links: {
@@ -159,7 +159,7 @@
       name: 'Vadim Safonov',
       role: 'Frontend Developer',
       profile: `
-        Software Engineer, Team lead at Rbc.ru. Degree in computer science
+        Software Engineer, Team lead at Rbc.ru. Degree in computer science.
       `,
       photo: 'safonov',
       links: {
