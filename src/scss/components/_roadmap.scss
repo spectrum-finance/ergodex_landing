@@ -118,6 +118,10 @@ $line_gradient: linear-gradient(65deg, color(primary, 1) 0, color(primary, 2) 10
 
 				& img {display: block; width: 50%}
 			}
+
+			& .stage-content__title {
+				color: #768696;
+			}
 		}
 
 		&.active {
