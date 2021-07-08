@@ -120,7 +120,7 @@
       name: 'Yasha Black',
       role: 'Product Manager',
       profile: `
-        Product manager at Ergo, UI Engineer at Mail.ru Group, Masters degree in management.
+        Product manager at Ergo, Frontend Developer at Mail.ru Group, Masters degree in management.
       `,
       photo: 'black',
       links: {
