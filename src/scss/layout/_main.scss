@@ -36,8 +36,18 @@ main {
 
 .github-button {
 	margin: 16px 0 64px 0;
+
+	@include media( '<medium' ) {
+		width: 220px;
+		margin-bottom: 32px;
+		margin-left: 0 !important;
+	}
 }
 
 .beta-button {
 	margin: 16px 0 64px 0;
+
+	@include media( '<medium' ) {
+		margin-bottom: 8px;
+	}
 }
