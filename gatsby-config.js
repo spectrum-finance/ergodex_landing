@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://www.ergodex.io",
     title: "lend",
   },
   plugins: [
@@ -24,5 +24,15 @@ module.exports = {
       },
       __key: "images",
     },
+    "gatsby-plugin-sass",
+    "gatsby-plugin-eslint",
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /\.inline\.svg$/
+        }
+      }
+    }
   ],
 };
