@@ -19,8 +19,6 @@ const SEO = ({ description, title, path }) => {
       <meta property="og:description" content={description} />
       <meta property="og:type" content={'website'} />
       <meta property="og:url" content={ergodexUrl + path} />
-
-      <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js" />
     </Helmet>
   )
 }
