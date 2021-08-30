@@ -1,0 +1,159 @@
+$line_duration: 5s;
+$line_gradient: linear-gradient(65deg, color(primary, 1) 0, color(primary, 2) 100%);
+
+.roadmap {
+	&__container {
+		position: relative;
+	}
+
+	&__line {
+		position: absolute;
+		top: 0;
+		left: 14px;
+		z-index: 0;
+		width: 2px;
+		height: 100%;
+		overflow: hidden;
+		background-color: $line_gradient;
+		border-radius: 20px;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: -50%;
+			width: 3px;
+			height: 40%;
+			background: $line_gradient;
+			animation: lineAnim $line_duration linear infinite;
+			border-radius: 20px;
+		}
+	}
+
+	&__stages {
+		@include resetList;
+
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		z-index: 1;
+		padding-top: 20px;
+	}
+
+	&__stage {
+		display: grid;
+		grid-template-columns: 30px 1fr;
+		margin-bottom: 20px;
+
+		& .stage-content {
+			margin-left: 1.5em;
+
+			&__title {
+				font-weight: bold;
+				font-size: 20px;
+				line-height: 24px;
+				margin: 0 0 10px 0;
+			}
+
+			&__list {
+				@include resetList;
+			}
+
+			&__item {
+				position: relative;
+				padding-left: 30px;
+				font-size: 16px;
+				line-height: 28px;
+				color: #fff;
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 15px;
+					height: 15px;
+					margin-top: 6px;
+					border-radius: 50%;
+					border: 2px solid #fff;
+				}
+
+				&.done:before {
+					border-color: #768696;
+				}
+
+				&.done {
+					text-decoration: line-through;
+					color: #768696;
+				}
+
+				&.done:after {
+					content: " ";
+					border: solid #768696;
+					position: absolute;
+					transform: rotate(-45deg);
+					border-width: 0 0 2px 2px;
+					height: 5px;
+					width: 10px;
+					top: 9px;
+					left: 5px;
+				}
+			}
+		}
+
+		& .bullet {
+			width: 30px;
+			height: 30px;
+			background: #141516;
+			border: 1px solid #fff;
+			border-radius: 50%;
+
+			& svg {display: none;}
+		}
+
+
+		&.done {
+			& .bullet {
+				display: flex;
+				justify-content: center;
+
+				& svg {display: block; width: 50%; height: 29px}
+			}
+
+			& .stage-content__title {
+				color: #768696;
+			}
+		}
+
+		&.active {
+			& .bullet {
+				box-shadow: 0 0 0 rgba(255, 81, 53, 0.9);
+				animation: pulse 2000ms infinite;
+				background: $line_gradient;
+				border: none;
+			}
+		}
+	}
+}
+
+@keyframes lineAnim {
+	0% {
+		top: -40%;
+	}
+	50% {
+		top: 20%;
+		height: 100%;
+	}
+	100% {
+		top: 100%;
+		height: 100%;
+	}
+}
+
+@keyframes pulse {
+	90% {
+		box-shadow: 0 0 0 30px rgba(255, 81, 53, 0);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(255, 81, 53, 0);
+	}
+}

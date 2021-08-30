@@ -1,0 +1,68 @@
+$timing        : 265ms;
+$grape         : color(primary, 2);
+$orchid        : color(primary, 1);
+
+@mixin transformScale($size: 1) {
+	transform: scale($size);
+	-ms-transform: scale($size);
+	-webkit-transform: scale($size);
+}
+
+.social-container {
+	width: 400px;
+	margin: 40vh auto;
+	text-align: center;
+}
+
+.social-list {
+	padding: 0;
+	list-style: none;
+	margin-top: 16px;
+
+	li {
+		display: inline-block;
+		position: relative;
+		font-size: 1.2em;
+
+		& + li {
+			margin-left: 12px;
+		}
+	}
+
+	svg {
+		width: 20px;
+		height: 20px;
+		color: #fff;
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		transition: all $timing ease-out;
+	}
+
+	a {
+		display: inline-block;
+
+		&:before {
+			@include transformScale();
+			content: " ";
+			width: 30px;
+			height: 30px;
+			display: block;
+			transition: all $timing ease-out;
+			background: linear-gradient(45deg, $grape, $orchid);
+			border-radius: 0;
+		}
+
+		&:hover:before {
+			transform: scale(0);
+			transition: all $timing ease-in;
+		}
+
+		&:hover svg {
+			@include transformScale(1);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			transition: all $timing ease-in;
+		}
+	}
+}
