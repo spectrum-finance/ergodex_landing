@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import Logo from '../images/logo.inline.svg'
 
 const Header = () => {
@@ -7,9 +8,9 @@ const Header = () => {
       <div className="site-header-inner">
         <div className="brand header-brand">
           <h1 className="m-0">
-            <a href="#">
+            <Link to='/'>
               <Logo />
-            </a>
+            </Link>
           </h1>
         </div>
       </div>

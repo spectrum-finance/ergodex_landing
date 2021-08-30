@@ -43,14 +43,14 @@ const Footer = () => {
           <div className="footer-copyright">&copy; 2021 ErgoDEX, all rights reserved</div>
           <ul className="footer-social-links list-reset">
             <li>
-              <a href="mailto:hello@ergodex.io">
-                hello@ergodex.io
-              </a>
-            </li>
-            <li>
               <Link to="/careers">
                 Careers
               </Link>
+            </li>
+            <li>
+              <a href="mailto:hello@ergodex.io">
+                hello@ergodex.io
+              </a>
             </li>
           </ul>
         </div>
