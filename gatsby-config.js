@@ -1,3 +1,5 @@
+const path = require("path")
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.ergodex.io",
@@ -20,7 +22,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: path.join(__dirname, `src`, `images`),
       },
       __key: "images",
     },
