@@ -1,8 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
 import isEmpty from 'lodash/isEmpty'
+
+import GithubIcon from '../images/github.inline.svg'
+import LinkedinIcon from '../images/linkedin.inline.svg'
+import TelegramIcon from '../images/telegram.inline.svg'
+
+const teamIcons = {
+  github: GithubIcon,
+  linkedin: LinkedinIcon,
+  telegram: TelegramIcon,
+}
 
 const StyledTitleContainer = styled.div`
   display: flex;
@@ -15,18 +24,32 @@ const StyledTeamMemberImageContainer = styled.div`
 `
 
 const StyledTeamMemberName = styled.h4`
-
+  font-size: 28px;
+  line-height: 28px;
+  margin: 0;
 `
 const StyledTeamMemberRole = styled.sub`
 
 `
 
 const StyledTeamMemberLinks = styled.div`
-
+  display: flex;
+  margin-top: 10px;
 `
 
 const StyledTeamMemberLink = styled(Link)`
-
+  margin-right: 15px;
+  color: #ffffff;
+  
+  svg {
+    width: 24px;
+    height: 24px;
+    color: #ffffff;
+    
+    path {
+      fill: #ffffff;
+    }
+  }
 `
 
 const StyledTeamMemberProfile = styled.div`
@@ -42,7 +65,7 @@ const TeamMember = ({ photo, name, role, profile, links}) => {
         <StyledTeamMemberImageContainer>
           <img
             style={{borderRadius: '50%', width: '150px'}}
-            src={`../images/${photo}.jpeg`}
+            src={photo}
             alt={`Team member photo: ${name}`}
           />
         </StyledTeamMemberImageContainer>
@@ -60,7 +83,7 @@ const TeamMember = ({ photo, name, role, profile, links}) => {
                   return (
                     links[key]
                       ? <StyledTeamMemberLink key={key + index} href={links[key]} target="_blank">
-                        <StaticImage src={`../static/${key}.svg`} alt={key}/>
+                        {teamIcons[key]()}
                       </StyledTeamMemberLink>
                       : null
                   )
