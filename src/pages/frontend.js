@@ -76,10 +76,10 @@ const CareersPage = () => {
         <p className="text-sm mb-16">
           <ul>
             <li>
-              At least 3 years experience on the same position;
+              At least 3 years experience in a similar position
             </li>
             <li>
-              Experience with TypeScript and React;
+              Experience with TypeScript and React
             </li>
             <li>
               A deep understanding of the architecture of modern client-side React applications
@@ -88,7 +88,7 @@ const CareersPage = () => {
               Solid experience with JavaScript testing tools
             </li>
             <li>
-              Discuss with team and make strong decisions in terms of UI/UX
+              Strong communications skills including the discussing any issues with team and making appropriate decisions in terms of UI/UX
             </li>
             <li>
               Experienced working with browser extensions
@@ -110,7 +110,7 @@ const CareersPage = () => {
               Familiar with Scala, Haskell or Solidity
             </li>
             <li>
-              Have Degree in computer science
+              Have a degree in Computer Science or related field
             </li>
           </ul>
         </p>
