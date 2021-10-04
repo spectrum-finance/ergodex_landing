@@ -117,17 +117,6 @@ const team = [
       github: 'https://github.com/imamatory'
     }
   },
-  // {
-  //   name: 'Max Pilipenko',
-  //   role: 'Frontend Developer',
-  //   profile: `
-  //
-  //     `,
-  //   photo: PilipenkoPhoto,
-  //   links: {
-  //     github: 'https://github.com/Piliponful',
-  //   }
-  // },
   {
     name: 'Dinh La Thang',
     role: 'Frontend Developer',
@@ -150,7 +139,7 @@ const team = [
     photo: RusskihPhoto,
   },
   {
-    name: 'Garry Waugh',
+    name: 'Gary Waugh',
     role: 'Community Manager',
     profile: `
         EUTxO Lover and Blockchain enthusiast. Degree in Industrial Automation Engineering.
