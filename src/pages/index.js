@@ -9,12 +9,18 @@ import Header from '../components/header'
 import TeamMember from '../components/teamMember'
 import MovingElements from '../components/movingElements'
 
+import TwitterIcon from '../images/twitter.inline.svg'
+import DiscordIcon from '../images/discord.inline.svg'
+
 import OksinPhoto from '../images/team/oskin.jpeg'
 import UsovPhoto from '../images/team/usov.jpeg'
 import BlackPhoto from '../images/team/black.jpeg'
 import GusevPhoto from '../images/team/gusev.jpeg'
 import RomanovskyPhoto from '../images/team/romanovsky.jpeg'
 import SafonovPhoto from '../images/team/safonov.jpeg'
+import WaughPhoto from '../images/team/waugh.jpg'
+import RusskihPhoto from '../images/team/russkih.jpeg'
+import LaThangPhoto from '../images/team/lathang.jpg'
 
 import DoneIcon from '../images/done.inline.svg'
 
@@ -54,27 +60,28 @@ const team = [
     }
   },
   {
-    name: 'Dmitriy Usov',
-    role: 'Lead UI Developer',
-    profile: `
-        Software Engineer, Developer of Ergo, ex. Frontend Team Lead at CityMobil, Degree in computer science.
-      `,
-    photo: UsovPhoto,
-    links: {
-      github: 'https://github.com/deadit'
-    }
-  },
-  {
     name: 'Yasha Black',
     role: 'Product Manager',
     profile: `
-        Product manager at Ergo, Frontend Developer at Mail.ru Group, Masters degree in management.
+        Ex Product Manager at Ergo, ex JavaScript Developer at Mail.ru Group.
+        Masters degree in management.
       `,
     photo: BlackPhoto,
     links: {
       linkedin: 'https://www.linkedin.com/in/yasha-black-25852018a/',
       telegram: 'https://t.me/yashablack',
       github: 'https://github.com/yasha-black'
+    }
+  },
+  {
+    name: 'Dmitriy Usov',
+    role: 'Frontend Advisor',
+    profile: `
+        Software Engineer, Developer of Ergo, ex. Frontend Team Lead at CityMobil, Degree in computer science.
+      `,
+    photo: UsovPhoto,
+    links: {
+      github: 'https://github.com/deadit'
     }
   },
   {
@@ -109,7 +116,47 @@ const team = [
     links: {
       github: 'https://github.com/imamatory'
     }
-  }
+  },
+  // {
+  //   name: 'Max Pilipenko',
+  //   role: 'Frontend Developer',
+  //   profile: `
+  //
+  //     `,
+  //   photo: PilipenkoPhoto,
+  //   links: {
+  //     github: 'https://github.com/Piliponful',
+  //   }
+  // },
+  {
+    name: 'Dinh La Thang',
+    role: 'Frontend Developer',
+    profile: `
+        Solid experience in frontend and smart contracts development.
+        Worked in such project as SushiSwap and LACHAIN.
+      `,
+    photo: LaThangPhoto,
+    links: {
+      github: 'https://github.com/msilucifery',
+      linkedin: 'https://www.linkedin.com/in/dinh-la-thang/',
+    }
+  },
+  {
+    name: 'Kostya Russkih',
+    role: 'Product Designer',
+    profile: `
+        Experienced UX/UI Designer in building financial services.
+      `,
+    photo: RusskihPhoto,
+  },
+  {
+    name: 'Garry Waugh',
+    role: 'Community Manager',
+    profile: `
+        EUTxO Lover and Blockchain enthusiast. Degree in Industrial Automation Engineering.
+      `,
+    photo: WaughPhoto,
+  },
 ]
 
 const IndexPage = props => {
@@ -135,12 +182,13 @@ const IndexPage = props => {
               href="https://beta.ergodex.io"
               target="_blank"
               rel="noreferrer"
+              style={{ marginRight: '1em' }}
             >
               <span className="mr-8">Try beta now</span>
             </a>
             <a className="ml-8 button button-primary button-align-items github-button"
                href="https://github.com/ergolabs" target="_blank" rel="noreferrer">
-              <span className="mr-8">Github</span>
+              <span className="mr-8">ErgoLabs</span>
               <svg className="eg-footer__social-icon eg-footer__social-icon--github" width="25"
                    height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg"
                    >
@@ -443,13 +491,9 @@ const IndexPage = props => {
             <ul className="social-list">
               <li className="social-item">
                 <a href="https://twitter.com/ErgoDex" target="_blank"
-                   className="social-link social-square" rel="noreferrer">
-                  <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
-                       xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M13.8375 40C30.4421 40 39.5225 26.1512 39.5225 14.142C39.5225 13.7486 39.5146 13.3571 39.497 12.9672C41.2637 11.6802 42.7885 10.0867 44 8.26117C42.3825 8.98506 40.6419 9.47232 38.816 9.69201C40.6797 8.56678 42.1105 6.78707 42.7856 4.66533C41.0134 5.72371 39.0748 6.46977 37.0533 6.87135C35.4059 5.10487 33.0608 4 30.4638 4C25.4786 4 21.436 8.07001 21.436 13.0869C21.436 13.8001 21.5153 14.4938 21.6702 15.1591C14.1674 14.779 7.51445 11.1627 3.06195 5.66377C2.26002 7.05059 1.83819 8.62689 1.83956 10.2316C1.83956 13.3846 3.43328 16.1681 5.85679 17.7965C4.42327 17.7525 3.02119 17.3627 1.76839 16.6598C1.76706 16.698 1.76706 16.7352 1.76706 16.7759C1.76706 21.1773 4.87877 24.852 9.0094 25.6847C8.23359 25.8975 7.43306 26.005 6.629 26.0046C6.05957 26.0042 5.49147 25.9493 4.93236 25.8407C6.08166 29.4517 9.41425 32.0794 13.3653 32.1528C10.2756 34.5909 6.38346 36.043 2.15331 36.043C1.42555 36.043 0.706648 36.0013 0 35.9172C3.99523 38.4953 8.7392 39.9996 13.838 39.9996"
-                      fill="#FFF"/>
-                  </svg>
+                   className="social-link social-square" rel="noreferrer"
+                >
+                  <TwitterIcon />
                 </a>
               </li>
               <li className="social-item">
@@ -460,6 +504,11 @@ const IndexPage = props => {
                       d="M2.69753 19.8127L28.9069 9.03556C31.494 7.91294 40.268 4.32055 40.268 4.32055C40.268 4.32055 44.3175 2.74888 43.98 6.56579C43.8675 8.13746 42.9676 13.6383 42.0678 19.5882L39.2556 37.2133C39.2556 37.2133 39.0306 39.7954 37.1184 40.2444C35.2061 40.6935 32.0565 38.6728 31.494 38.2237C31.0441 37.8869 23.0576 32.8351 20.1329 30.3654C19.3455 29.6918 18.4456 28.3446 20.2454 26.773C24.2949 23.0683 29.1318 18.4656 32.0565 15.5468C33.4063 14.1996 34.7561 11.0563 29.1318 14.8732L13.2712 25.5381C13.2712 25.5381 11.4715 26.6607 8.09688 25.6503C4.72228 24.64 0.78526 23.2928 0.78526 23.2928C0.78526 23.2928 -1.91441 21.6089 2.69753 19.8127V19.8127Z"
                       fill="#FFF"/>
                   </svg>
+                </a>
+              </li>
+              <li className="social-item">
+                <a href="https://discord.gg/hDNvRQWk" target="_blank" className="social-link" rel="noreferrer">
+                  <DiscordIcon />
                 </a>
               </li>
             </ul>
