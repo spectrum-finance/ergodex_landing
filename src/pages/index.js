@@ -121,8 +121,8 @@ const team = [
     name: 'Dinh La Thang',
     role: 'Frontend Developer',
     profile: `
-        Solid experience in frontend and smart contracts development.
-        Worked in such project as SushiSwap and LACHAIN.
+        Self-motivated full-stack engineer with solid experience
+        in front-end and smart contracts development.
       `,
     photo: LaThangPhoto,
     links: {
@@ -154,7 +154,7 @@ const IndexPage = props => {
       <SEO
         title='Home'
         path={props.location.pathname}
-        description={'Swap and exchange on top of Ergo and Cardano blockchains'}
+        description={'Provide liquidity, swap and exchange assets on top of Ergo and Cardano blockchains'}
       />
       <Header />
       <section className="hero">
