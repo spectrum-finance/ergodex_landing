@@ -1,6 +1,5 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import OGimage from '../images/og_ergodex.jpg'
 
 const SEO = ({ description, title, path }) => {
   const ergodexUrl = 'https://ergodex.io'

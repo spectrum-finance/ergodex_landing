@@ -496,7 +496,7 @@ const IndexPage = props => {
                 </a>
               </li>
               <li className="social-item">
-                <a href="https://discord.gg/hDNvRQWk" target="_blank" className="social-link" rel="noreferrer">
+                <a href="https://discord.com/invite/eE8eQ2p8" target="_blank" className="social-link" rel="noreferrer">
                   <DiscordIcon />
                 </a>
               </li>
