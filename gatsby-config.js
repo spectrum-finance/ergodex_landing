@@ -35,6 +35,7 @@ module.exports = {
       },
       __key: "updates",
     },
+    "gatsby-transformer-remark",
     "gatsby-plugin-sass",
     "gatsby-plugin-eslint",
     {
