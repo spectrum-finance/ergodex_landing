@@ -10,6 +10,7 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
+    'gatsby-plugin-netlify-cms',
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -25,6 +26,14 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
       __key: "images",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "updates",
+        path: path.join(__dirname, `content`, `updates`),
+      },
+      __key: "updates",
     },
     "gatsby-plugin-sass",
     "gatsby-plugin-eslint",
