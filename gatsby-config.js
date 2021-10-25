@@ -10,7 +10,6 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
-    'gatsby-plugin-netlify-cms',
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -28,12 +27,11 @@ module.exports = {
       __key: "images",
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "updates",
-        path: path.join(__dirname, `content`, `updates`),
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
       },
-      __key: "updates",
     },
     "gatsby-transformer-remark",
     "gatsby-plugin-sass",
@@ -45,6 +43,7 @@ module.exports = {
           include: /\.inline\.svg$/
         }
       }
-    }
+    },
+    'gatsby-plugin-netlify-cms',
   ],
 };
