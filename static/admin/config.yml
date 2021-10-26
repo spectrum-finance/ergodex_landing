@@ -11,7 +11,7 @@ public_folder: "/img/uploads" # The src attribute for uploaded media will begin 
 collections:
   - name: 'en_update'
     label: 'English updates post'
-    folder: "src/updates"
+    folder: "src/pages/updates"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
