@@ -168,12 +168,12 @@ const IndexPage = props => {
             </p>
             <a
               className="button button-primary button-align-items beta-button glow-on-hover "
-              href="https://beta.ergodex.io"
+              href="https://app.ergodex.io"
               target="_blank"
               rel="noreferrer"
               style={{ marginRight: '1em' }}
             >
-              <span className="mr-8">Try beta now</span>
+              <span className="mr-8">Launch app</span>
             </a>
             <a className="ml-8 button button-primary button-align-items github-button"
                href="https://github.com/ergolabs" target="_blank" rel="noreferrer">
