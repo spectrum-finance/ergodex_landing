@@ -118,19 +118,6 @@ const team = [
     }
   },
   {
-    name: 'Dinh La Thang',
-    role: 'Frontend Developer',
-    profile: `
-        Self-motivated full-stack engineer with solid experience
-        in front-end and smart contracts development.
-      `,
-    photo: LaThangPhoto,
-    links: {
-      github: 'https://github.com/msilucifery',
-      linkedin: 'https://www.linkedin.com/in/dinh-la-thang/',
-    }
-  },
-  {
     name: 'Kostya Russkih',
     role: 'Product Designer',
     profile: `
