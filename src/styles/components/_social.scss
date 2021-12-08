@@ -50,7 +50,7 @@ $orchid        : color(primary, 1);
 			display: block;
 			transition: all $timing ease-out;
 			background: linear-gradient(45deg, $grape, $orchid);
-			border-radius: 0;
+			border-radius: 8px;
 		}
 
 		&:hover:before {

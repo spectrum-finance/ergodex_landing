@@ -64,7 +64,7 @@ const TeamMember = ({ photo, name, role, profile, links}) => {
       <StyledTitleContainer>
         <StyledTeamMemberImageContainer>
           <img
-            style={{borderRadius: '50%', width: '150px'}}
+            style={{borderRadius: '50%', width: '150px', height: '150px'}}
             src={photo}
             alt={`Team member photo: ${name}`}
           />

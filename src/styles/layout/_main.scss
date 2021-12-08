@@ -35,8 +35,6 @@ main {
 }
 
 .github-button {
-	margin: 16px 0 64px 8px;
-
 	@include media( '<medium' ) {
 		width: 220px;
 		margin-bottom: 32px;
@@ -44,9 +42,7 @@ main {
 	}
 }
 
-.beta-button {
-	margin: 16px 0 64px 0;
-
+.launch-button {
 	@include media( '<medium' ) {
 		margin-bottom: 8px;
 	}
