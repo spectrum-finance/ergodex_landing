@@ -34,7 +34,7 @@ export const team = [
     }
   },
   {
-    name: 'Ruslan Slahov',
+    name: 'Ruslan Salahov',
     role: 'Frontend Lead Dev',
     profile: `
         Frontend engineer with 6+ years of dev experience. Expert in low-level JavaScript programming.
