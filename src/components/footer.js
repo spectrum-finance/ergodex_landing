@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 const Footer = () => {
   return (
@@ -42,11 +41,11 @@ const Footer = () => {
         <div className="site-footer-inner has-top-divider">
           <div className="footer-copyright">&copy; 2021 ErgoDEX, all rights reserved</div>
           <ul className="footer-social-links list-reset">
-            <li>
-              <Link to="/careers">
-                Careers
-              </Link>
-            </li>
+            {/*<li>*/}
+            {/*  <Link to="/careers">*/}
+            {/*    Careers*/}
+            {/*  </Link>*/}
+            {/*</li>*/}
             <li>
               <a href="mailto:hello@ergodex.io">
                 hello@ergodex.io

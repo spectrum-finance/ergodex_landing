@@ -3,24 +3,13 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 import Layout from '../layouts'
+import { SocialLinks } from '../components/SocialLinks/SocialLinks'
 
 import SEO from '../components/seo'
 import Header from '../components/header'
 import TeamMember from '../components/teamMember'
 import MovingElements from '../components/movingElements'
-
-import TwitterIcon from '../images/twitter.inline.svg'
-import DiscordIcon from '../images/discord.inline.svg'
-
-import OksinPhoto from '../images/team/oskin.jpeg'
-import UsovPhoto from '../images/team/usov.jpeg'
-import BlackPhoto from '../images/team/black.jpeg'
-import GusevPhoto from '../images/team/gusev.jpeg'
-import RomanovskyPhoto from '../images/team/romanovsky.jpeg'
-import SafonovPhoto from '../images/team/safonov.jpeg'
-import WaughPhoto from '../images/team/waugh.jpg'
-import RusskihPhoto from '../images/team/russkih.jpeg'
-import LaThangPhoto from '../images/team/lathang.jpg'
+import { team } from '../constants/team.js'
 
 import DoneIcon from '../images/done.inline.svg'
 
@@ -47,94 +36,6 @@ const StyledLink = styled(Link)`
   }
 `
 
-const team = [
-  {
-    name: 'Ilya Oskin',
-    role: 'Lead Developer',
-    profile: `
-        Software Engineer, Core Developer of Ergo, Lead Developer at Mail.ru Group, Degree in Economics.
-      `,
-    photo: OksinPhoto,
-    links: {
-      github: 'https://github.com/oskin1'
-    }
-  },
-  {
-    name: 'Yasha Black',
-    role: 'Product Manager',
-    profile: `
-        Ex Product Manager at Ergo, ex JavaScript Developer at Mail.ru Group.
-        Masters degree in management.
-      `,
-    photo: BlackPhoto,
-    links: {
-      linkedin: 'https://www.linkedin.com/in/yasha-black-25852018a/',
-      telegram: 'https://t.me/yashablack',
-      github: 'https://github.com/yasha-black'
-    }
-  },
-  {
-    name: 'Dmitriy Usov',
-    role: 'Frontend Advisor',
-    profile: `
-        Software Engineer, Developer of Ergo, ex. Frontend Team Lead at CityMobil, Degree in computer science.
-      `,
-    photo: UsovPhoto,
-    links: {
-      github: 'https://github.com/deadit'
-    }
-  },
-  {
-    name: 'Timofey Gusev',
-    role: 'Core Developer',
-    profile: `
-        Software Engineer, Developer at Mail.ru Group, FP enthusiast, ex. Blockchain Core Dev., Degree in cyber security.
-      `,
-    photo: GusevPhoto,
-    links: {
-      github: 'https://github.com/GusevTimofey'
-    }
-  },
-  {
-    name: 'Alexander Romanovskiy',
-    role: 'Core developer',
-    profile: `
-        Software engineer. One of the creators of Encry blockchain and smart contract language Prism. FP enthusiast. Has expertise in cybersecurity. Ergo ecosystem developer.
-      `,
-    photo: RomanovskyPhoto,
-    links: {
-      github: 'https://github.com/Bromel777'
-    }
-  },
-  {
-    name: 'Vadim Safonov',
-    role: 'Frontend Developer',
-    profile: `
-        Software Engineer, Team lead at Rbc.ru. Degree in computer science.
-      `,
-    photo: SafonovPhoto,
-    links: {
-      github: 'https://github.com/imamatory'
-    }
-  },
-  {
-    name: 'Kostya Russkih',
-    role: 'Product Designer',
-    profile: `
-        Experienced UX/UI Designer in building financial services.
-      `,
-    photo: RusskihPhoto,
-  },
-  {
-    name: 'Gary Waugh',
-    role: 'Community Manager',
-    profile: `
-        EUTxO Lover and Blockchain enthusiast. Degree in Industrial Automation Engineering.
-      `,
-    photo: WaughPhoto,
-  },
-]
-
 const IndexPage = props => {
   return (
     <Layout>
@@ -147,40 +48,21 @@ const IndexPage = props => {
       <section className="hero">
         <div className="hero-inner">
           <div className="hero-copy">
-            <h1 className="hero-title mt-0 is-revealing">Decentralized exchange <br/> on Ergo and Cardano
-            </h1>
-            <p className="hero-paragraph is-revealing" style={{margin: 0}}>A non-custodial, decentralised
+            <h1 className="hero-title mt-0 is-revealing">Decentralized exchange <br/> on Ergo and Cardano</h1>
+
+            <p className="hero-paragraph is-revealing" style={{margin: 0, marginBottom: '20px'}}>A non-custodial, decentralised
               exchange that allows a quick, effortless and secure transfer of liquidity between the
               Ergo and Cardano networks.
             </p>
             <a
-              className="button button-primary button-align-items beta-button glow-on-hover "
+              className="button button-primary button-align-items launch-button glow-on-hover"
               href="https://app.ergodex.io"
               target="_blank"
               rel="noreferrer"
-              style={{ marginRight: '1em' }}
             >
-              <span className="mr-8">Launch app</span>
+              Launch App
             </a>
-            <a className="ml-8 button button-primary button-align-items github-button"
-               href="https://github.com/ergolabs" target="_blank" rel="noreferrer">
-              <span className="mr-8">ErgoLabs</span>
-              <svg className="eg-footer__social-icon eg-footer__social-icon--github" width="25"
-                   height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg"
-                   >
-                <title>Github</title>
-                <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-                  <g className="eg-social__icon--github"
-                     transform="translate(-70.000000, -395.000000)" fill="#fff">
-                    <g transform="translate(70.000000, 395.000000)">
-                      <path
-                        d="M12.3398485-.000378787879C5.52545455-.000378787879-.000303030303 5.52537879-.000303030303 12.3412879-.000303030303 17.792803 3.53530303 22.4185606 8.43984848 24.0503788 9.05727273 24.1632576 9.28227273 23.7829545 9.28227273 23.4556818 9.28227273 23.1625 9.27166667 22.3867424 9.26560606 21.3564394 5.8330303 22.1026515 5.10878788 19.7026515 5.10878788 19.7026515 4.54742424 18.2768939 3.73833333 17.8973485 3.73833333 17.8973485 2.61787879 17.1314394 3.82318182 17.1473485 3.82318182 17.1473485 5.06181818 17.2344697 5.71333333 18.4185606 5.71333333 18.4185606 6.81409091 20.3049242 8.60121212 19.7602273 9.305 19.4443182 9.41712121 18.6465909 9.73530303 18.1026515 10.0883333 17.7943182 7.34818182 17.4829545 4.46712121 16.4246212 4.46712121 11.6950758 4.46712121 10.3481061 4.94818182 9.24659091 5.73757576 8.38371212 5.61030303 8.07159091 5.18681818 6.81704545 5.8580303 5.11856061 5.8580303 5.11856061 6.89439394 4.78598485 9.2519697 6.38295455 10.2360606 6.1094697 11.2921212 5.97234848 12.3413636 5.96780303 13.3890909 5.97234848 14.4451515 6.1094697 15.4307576 6.38295455 17.7868182 4.78598485 18.8209091 5.11856061 18.8209091 5.11856061 19.4943939 6.81704545 19.0709091 8.07159091 18.9436364 8.38371212 19.7345455 9.24659091 20.2125758 10.3481061 20.2125758 11.6950758 20.2125758 16.4359848 17.3269697 17.4791667 14.5777273 17.7852273 15.0209091 18.1655303 15.4156061 18.9193182 15.4156061 20.0700758 15.4156061 21.7200758 15.4004545 23.0511364 15.4004545 23.4556818 15.4004545 23.7852273 15.6224242 24.1693182 16.2489394 24.0488636 21.1481818 22.4140152 24.6815152 17.7912879 24.6815152 12.3412879 24.6815152 5.52537879 19.1557576-.000378787879 12.3398485-.000378787879">
-                      </path>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-            </a>
+            <SocialLinks />
           </div>
           <MovingElements />
         </div>
@@ -464,30 +346,7 @@ const IndexPage = props => {
         <div className="hero-inner">
           <div className="hero-copy">
             <h3>Join us</h3>
-            <ul className="social-list">
-              <li className="social-item">
-                <a href="https://twitter.com/ErgoDex" target="_blank"
-                   className="social-link social-square" rel="noreferrer"
-                >
-                  <TwitterIcon />
-                </a>
-              </li>
-              <li className="social-item">
-                <a href="https://t.me/ergodex" target="_blank" className="social-link" rel="noreferrer">
-                  <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
-                       xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M2.69753 19.8127L28.9069 9.03556C31.494 7.91294 40.268 4.32055 40.268 4.32055C40.268 4.32055 44.3175 2.74888 43.98 6.56579C43.8675 8.13746 42.9676 13.6383 42.0678 19.5882L39.2556 37.2133C39.2556 37.2133 39.0306 39.7954 37.1184 40.2444C35.2061 40.6935 32.0565 38.6728 31.494 38.2237C31.0441 37.8869 23.0576 32.8351 20.1329 30.3654C19.3455 29.6918 18.4456 28.3446 20.2454 26.773C24.2949 23.0683 29.1318 18.4656 32.0565 15.5468C33.4063 14.1996 34.7561 11.0563 29.1318 14.8732L13.2712 25.5381C13.2712 25.5381 11.4715 26.6607 8.09688 25.6503C4.72228 24.64 0.78526 23.2928 0.78526 23.2928C0.78526 23.2928 -1.91441 21.6089 2.69753 19.8127V19.8127Z"
-                      fill="#FFF"/>
-                  </svg>
-                </a>
-              </li>
-              <li className="social-item">
-                <a href="https://discord.gg/6MFFG4Fn4Y" target="_blank" className="social-link" rel="noreferrer">
-                  <DiscordIcon />
-                </a>
-              </li>
-            </ul>
+            <SocialLinks />
           </div>
         </div>
       </section>
