@@ -2,7 +2,6 @@ import OksinPhoto from '../images/team/oskin.jpeg'
 import BlackPhoto from '../images/team/black.jpeg'
 import GusevPhoto from '../images/team/gusev.jpeg'
 import RomanovskyPhoto from '../images/team/romanovsky.jpeg'
-import SafonovPhoto from '../images/team/safonov.jpeg'
 import RusskihPhoto from '../images/team/russkih.jpeg'
 import WaughPhoto from '../images/team/waugh.jpg'
 import SalahovPhoto from '../images/team/salahov.jpg'
@@ -12,7 +11,7 @@ export const team = [
     name: 'Ilya Oskin',
     role: 'Lead Developer',
     profile: `
-        Software Engineer, Core Developer of Ergo, Lead Developer at Mail.ru Group, Degree in Economics.
+        Software Engineer, Core Developer of Ergo, Lead Developer at VK, Degree in Economics.
       `,
     photo: OksinPhoto,
     links: {
@@ -23,7 +22,7 @@ export const team = [
     name: 'Yasha Black',
     role: 'Product Manager',
     profile: `
-        Ex Product Manager at Ergo, ex JavaScript Developer at Mail.ru Group.
+        Ex Product Manager at Ergo, ex JavaScript Developer at VK.
         Masters degree in management.
       `,
     photo: BlackPhoto,
@@ -47,9 +46,7 @@ export const team = [
   {
     name: 'Timofey Gusev',
     role: 'Core Developer',
-    profile: `
-        Software Engineer, Developer at Mail.ru Group, FP enthusiast, ex. Blockchain Core Dev., Degree in cyber security.
-      `,
+    profile: `Software Engineer, Developer at VK, FP enthusiast, ex. Blockchain Core Dev., Degree in cyber security.`,
     photo: GusevPhoto,
     links: {
       github: 'https://github.com/GusevTimofey'
@@ -67,14 +64,12 @@ export const team = [
     }
   },
   {
-    name: 'Vadim Safonov',
-    role: 'Frontend Developer',
-    profile: `
-        Software Engineer, Team lead at Rbc.ru. Degree in computer science.
-      `,
-    photo: SafonovPhoto,
+    name: 'Denis Kovalev',
+    role: 'DevOps engineer',
+    profile: `Broad development and automation experience. Ex. Lead DevOps at VK.`,
+    photo: RomanovskyPhoto,
     links: {
-      github: 'https://github.com/imamatory'
+      github: 'https://github.com/Bromel777'
     }
   },
   {
