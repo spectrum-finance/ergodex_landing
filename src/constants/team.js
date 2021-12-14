@@ -5,6 +5,7 @@ import RomanovskyPhoto from '../images/team/romanovsky.jpeg'
 import RusskihPhoto from '../images/team/russkih.jpeg'
 import WaughPhoto from '../images/team/waugh.jpg'
 import SalahovPhoto from '../images/team/salahov.jpg'
+import KovalevPhoto from '../images/team/kovalev.jpeg'
 
 export const team = [
   {
@@ -33,17 +34,6 @@ export const team = [
     }
   },
   {
-    name: 'Ruslan Slahov',
-    role: 'Frontend Lead Dev',
-    profile: `
-        Frontend engineer with 6+ years of dev experience. Expert in low-level JavaScript programming.
-      `,
-    photo: SalahovPhoto,
-    links: {
-      github: 'https://github.com/Ridel1e',
-    }
-  },
-  {
     name: 'Timofey Gusev',
     role: 'Core Developer',
     profile: `Software Engineer, Developer at VK, FP enthusiast, ex. Blockchain Core Dev., Degree in cyber security.`,
@@ -54,7 +44,7 @@ export const team = [
   },
   {
     name: 'Alexander Romanovskiy',
-    role: 'Core developer',
+    role: 'Core Developer',
     profile: `
         Software engineer. One of the creators of Encry blockchain and smart contract language Prism. FP enthusiast. Has expertise in cybersecurity. Ergo ecosystem developer.
       `,
@@ -64,10 +54,21 @@ export const team = [
     }
   },
   {
+    name: 'Ruslan Slakhov',
+    role: 'Frontend Lead Developer',
+    profile: `
+        Frontend engineer with 6+ years of dev experience. Expert in low-level JavaScript programming.
+      `,
+    photo: SalahovPhoto,
+    links: {
+      github: 'https://github.com/Ridel1e',
+    }
+  },
+  {
     name: 'Denis Kovalev',
-    role: 'DevOps engineer',
+    role: 'DevOps Engineer',
     profile: `Broad development and automation experience. Ex. Lead DevOps at VK.`,
-    photo: RomanovskyPhoto,
+    photo: KovalevPhoto,
     links: {
       github: 'https://github.com/Bromel777'
     }
