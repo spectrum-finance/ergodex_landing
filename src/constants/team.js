@@ -69,9 +69,6 @@ export const team = [
     role: 'DevOps Engineer',
     profile: `Broad development and automation experience. Ex. Lead DevOps at VK.`,
     photo: KovalevPhoto,
-    links: {
-      github: 'https://github.com/Bromel777'
-    }
   },
   {
     name: 'Kostya Russkih',
