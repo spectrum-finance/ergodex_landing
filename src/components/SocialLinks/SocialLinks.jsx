@@ -2,6 +2,7 @@ import React from "react";
 
 import DiscordIcon from "../../images/discord.inline.svg";
 import GithubIcon from "../../images/github.inline.svg";
+import MediumIcon from "../../images/medium.inline.svg";
 import RedditIcon from "../../images/reddit.inline.svg";
 import TwitterIcon from "../../images/twitter.inline.svg";
 
@@ -67,6 +68,16 @@ const SocialLinks = () => {
           rel="noreferrer"
         >
           <GithubIcon />
+        </a>
+      </li>
+      <li className="social-item">
+        <a
+          href="https://github.com/ergolabs"
+          target="_blank"
+          className="social-link"
+          rel="noreferrer"
+        >
+          <MediumIcon />
         </a>
       </li>
     </ul>
