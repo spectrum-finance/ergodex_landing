@@ -1,5 +1,5 @@
-import React from "react"
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
+import React from "react";
 
 export default function HTML(props) {
   return (
@@ -22,7 +22,8 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
         <script
-          dangerouslySetInnerHTML={{__html: `
+          dangerouslySetInnerHTML={{
+            __html: `
             (function () {
               const win = window
               const doc = document.documentElement
@@ -128,11 +129,12 @@ export default function HTML(props) {
               }, 500)
             }())
 
-          `}}
+          `,
+          }}
         />
       </body>
     </html>
-  )
+  );
 }
 
 HTML.propTypes = {
@@ -142,4 +144,4 @@ HTML.propTypes = {
   preBodyComponents: PropTypes.array,
   body: PropTypes.string,
   postBodyComponents: PropTypes.array,
-}
+};
