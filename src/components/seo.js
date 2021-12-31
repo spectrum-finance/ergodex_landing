@@ -1,9 +1,9 @@
-import React from 'react'
-import Helmet from 'react-helmet'
+import React from "react";
+import Helmet from "react-helmet";
 
 const SEO = ({ description, title, path }) => {
-  const ergodexUrl = 'https://ergodex.io'
-  const ergodexTitle = 'ErgoDEX'
+  const ergodexUrl = "https://ergodex.io";
+  const ergodexTitle = "ErgoDEX";
 
   return (
     <Helmet>
@@ -15,18 +15,24 @@ const SEO = ({ description, title, path }) => {
 
       <title>{ergodexTitle}</title>
 
-      <meta property="og:image" content='https://adapulse.io/wp-content/uploads/2021/06/2021-06-27-21.13.19-800x395.jpg' />
+      <meta
+        property="og:image"
+        content="https://adapulse.io/wp-content/uploads/2021/06/2021-06-27-21.13.19-800x395.jpg"
+      />
       <meta property="og:title" content={ergodexTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content={'website'} />
+      <meta property="og:type" content={"website"} />
       <meta property="og:url" content={ergodexUrl + path} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content="@ErgoDEX" />
       <meta name="twitter:site" content="@ErgoDEX" />
-      <meta property="og:image" content='https://adapulse.io/wp-content/uploads/2021/06/2021-06-27-21.13.19-800x395.jpg' />
+      <meta
+        property="og:image"
+        content="https://adapulse.io/wp-content/uploads/2021/06/2021-06-27-21.13.19-800x395.jpg"
+      />
     </Helmet>
-  )
-}
+  );
+};
 
-export default SEO
+export default SEO;

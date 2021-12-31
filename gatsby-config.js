@@ -1,9 +1,9 @@
-const path = require("path")
+const path = require("path");
 
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.ergodex.io",
-    title: "lend",
+    title: "ErgoDEX",
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -27,23 +27,29 @@ module.exports = {
       __key: "images",
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/pages`,
-        name: 'pages',
+        name: "pages",
       },
     },
     "gatsby-transformer-remark",
     "gatsby-plugin-sass",
     "gatsby-plugin-eslint",
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /\.inline\.svg$/
-        }
-      }
+          include: /\.inline\.svg$/,
+        },
+      },
     },
-    'gatsby-plugin-netlify-cms',
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "G-Z8Q792CL4B",
+      },
+    },
+    "gatsby-plugin-netlify-cms",
   ],
 };

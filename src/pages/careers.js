@@ -1,17 +1,17 @@
-import React from "react"
-import styled from 'styled-components'
-import { Link } from 'gatsby'
-import Layout from '../layouts'
+import { Link } from "gatsby";
+import React from "react";
+import styled from "styled-components";
 
-import SEO from '../components/seo'
-import Header from '../components/header'
-import MovingElements from '../components/movingElements'
+import Header from "../components/header";
+import MovingElements from "../components/movingElements";
+import SEO from "../components/seo";
+import Layout from "../layouts";
 
 const StyledJobsList = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
-`
+`;
 
 const StyledJobsLink = styled(Link)`
   max-width: 300px;
@@ -23,63 +23,56 @@ const StyledJobsLink = styled(Link)`
   text-align: center;
   border-radius: 24px;
   margin-bottom: 10px;
-  
-  
+
   :hover {
-    color: #FF5135;
-    border: 2px solid #FF5135;
+    color: #ff5135;
+    border: 2px solid #ff5135;
   }
-`
+`;
 
 const jobs = [
   {
-    role: 'Senior Frontend Engineer',
-    to: '/frontend'
+    role: "Senior Frontend Engineer",
+    to: "/frontend",
   },
-]
+];
 
 const JobItem = ({ role, to }) => {
   return (
-    <li style={{maxWidth: '300px', marginBottom: '30px'}}>
-      <StyledJobsLink to={to}>
-        {role}
-      </StyledJobsLink>
+    <li style={{ maxWidth: "300px", marginBottom: "30px" }}>
+      <StyledJobsLink to={to}>{role}</StyledJobsLink>
     </li>
-  )
-}
+  );
+};
 
-const CareersPage = props => {
+const CareersPage = (props) => {
   return (
     <Layout>
       <SEO
-        title='Careers'
+        title="Careers"
         path={props.location.pathname}
-        description={'Jop opportunities in ErgoDEX'}
+        description={"Jop opportunities in ErgoDEX"}
       />
       <Header />
       <section className="hero">
         <div className="hero-inner">
           <div className="hero-copy">
-            <h1 className="hero-title mt-0 is-revealing">
-              ErgoDEX Careers
-            </h1>
+            <h1 className="hero-title mt-0 is-revealing">ErgoDEX Careers</h1>
           </div>
           <MovingElements />
         </div>
       </section>
-      <div style={{marginTop: '20px'}}>
+      <div style={{ marginTop: "20px" }}>
         <section>
           <StyledJobsList>
-            {
-              jobs.map((job, index) =>
-              (<JobItem key={index} {...job} />))
-            }
+            {jobs.map((job, index) => (
+              <JobItem key={index} {...job} />
+            ))}
           </StyledJobsList>
         </section>
       </div>
-
     </Layout>
-  )
-}
+  );
+};
 
-export default CareersPage
+export default CareersPage;
