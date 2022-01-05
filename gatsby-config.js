@@ -44,12 +44,18 @@ module.exports = {
         },
       },
     },
+    "gatsby-plugin-netlify-cms",
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: "G-Z8Q792CL4B",
+        trackingIds: ["G-EHZXZ5CZ8V"],
+        gtagConfig: {
+          anonymize_ip: true,
+        },
+        pluginConfig: {
+          head: true,
+        },
       },
     },
-    "gatsby-plugin-netlify-cms",
   ],
 };
