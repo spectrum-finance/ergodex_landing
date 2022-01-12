@@ -72,7 +72,7 @@ const SocialLinks = () => {
       </li>
       <li className="social-item">
         <a
-          href="https://github.com/ergolabs"
+          href="https://ergodex.medium.com/"
           target="_blank"
           className="social-link"
           rel="noreferrer"
