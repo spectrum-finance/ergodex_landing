@@ -4,11 +4,11 @@ import styled from "styled-components";
 
 import Header from "../components/header";
 import MovingElements from "../components/movingElements";
+import { Roadmap } from "../components/Roadmap/Roadmap";
 import SEO from "../components/seo";
 import { SocialLinks } from "../components/SocialLinks/SocialLinks";
 import TeamMember from "../components/teamMember";
 import { team } from "../constants/team.js";
-import DoneIcon from "../images/done.inline.svg";
 import Layout from "../layouts";
 
 const StyledTeamList = styled.ul`
@@ -56,7 +56,7 @@ const IndexPage = (props) => {
               className="hero-paragraph is-revealing"
               style={{ margin: 0, marginBottom: "20px" }}
             >
-              A non-custodial, decentralised exchange that allows a quick,
+              A noncustodial, decentralised exchange that allows a quick,
               effortless and secure transfer of liquidity between the Ergo and
               Cardano networks.
             </p>
@@ -215,168 +215,7 @@ const IndexPage = (props) => {
           </div>
         </div>
       </section>
-      <section className="roadmap">
-        <h3>Roadmap</h3>
-        <div className="roadmap__container">
-          <ul className="roadmap__stages">
-            <li className="roadmap__stage done">
-              <div className="bullet">
-                <DoneIcon />
-              </div>
-              <div className="stage-content">
-                <h4 className="stage-content__title">
-                  Stage 1. OrderBook DEX: Core development
-                </h4>
-                <ul className="stage-content__list">
-                  <li className="stage-content__item done">
-                    Order Book DEX RnD
-                  </li>
-                  <li className="stage-content__item done">
-                    Order Book DEX contracts implementation (Ergo Network)
-                  </li>
-                  <li className="stage-content__item done">
-                    Order Book DEX contracts: public audit (Ergo Network)
-                  </li>
-                  <li className="stage-content__item done">
-                    Order Book Matcher development (Ergo Network)
-                  </li>
-                  <li className="stage-content__item done">
-                    Order Book DEX testing (Ergo Network)
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li className="roadmap__stage done">
-              <div className="bullet">
-                <DoneIcon />
-              </div>
-              <div className="stage-content">
-                <h4 className="stage-content__title">
-                  Stage 2. AMM DEX: Core development
-                </h4>
-                <ul className="stage-content__list">
-                  <li className="stage-content__item done">AMM DEX RnD</li>
-                  <li className="stage-content__item done">
-                    AMM DEX contracts (Ergo Network)
-                  </li>
-                  <li className="stage-content__item done">
-                    AMM DEX contracts: public audit (Ergo Network)
-                  </li>
-                  <li className="stage-content__item done">
-                    AMM DEX Bots (Ergo Network)
-                  </li>
-                  <li className="stage-content__item done">
-                    AMM DEX contracts testing (Ergo Network)
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li className="roadmap__stage done">
-              <div className="bullet">
-                <DoneIcon />
-              </div>
-              <div className="stage-content">
-                <h4 className="stage-content__title">
-                  Stage 3. AMM DEX: Frontend development
-                </h4>
-                <ul className="stage-content__list">
-                  <li className="stage-content__item done">
-                    JavaScript AMM DEX SDK (Ergo Network)
-                  </li>
-                  <li className="stage-content__item done">
-                    Minimal viable AMM UI (Ergo Network)
-                  </li>
-                  <li className="stage-content__item done">
-                    ErgoDEX UI guidelines
-                  </li>
-                  <li className="stage-content__item done">AMM UI design</li>
-                  <li className="stage-content__item done">
-                    Public AMM DEX testing (Ergo Network)
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li className="roadmap__stage active">
-              <div className="bullet">
-                <DoneIcon />
-              </div>
-              <div className="stage-content">
-                <h4 className="stage-content__title">
-                  Stage 4. OrderBook DEX: Frontend development
-                </h4>
-                <ul className="stage-content__list">
-                  <li className="stage-content__item">
-                    JavaScript Order Book DEX SDK implementation (Ergo Network)
-                  </li>
-                  <li className="stage-content__item">Order Book UI design</li>
-                  <li className="stage-content__item">
-                    Order Book UI development (Ergo Network)
-                  </li>
-                  <li className="stage-content__item">
-                    Public Order Book DEX testing (Ergo Network)
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li className="roadmap__stage">
-              <div className="bullet">
-                <DoneIcon />
-              </div>
-              <div className="stage-content">
-                <h4 className="stage-content__title">
-                  Stage 5. ErgoDEX for Cardano
-                </h4>
-                <ul className="stage-content__list">
-                  <li className="stage-content__item done">
-                    AMM DEX contracts (Plutus)
-                  </li>
-                  <li className="stage-content__item done">
-                    AMM DEX Bots (Cardano Network)
-                  </li>
-                  <li className="stage-content__item">
-                    JavaScript AMM DEX SDK (Cardano Network)
-                  </li>
-                  <li className="stage-content__item">
-                    Order Book DEX contracts (Plutus)
-                  </li>
-                  <li className="stage-content__item">
-                    Order Book DEX Matcher (Cardano Network)
-                  </li>
-                  <li className="stage-content__item">
-                    JavaScript Order Book DEX SDK (Cardano Network)
-                  </li>
-                  <li className="stage-content__item">
-                    ErgoDEX UI update for Cardano network
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li className="roadmap__stage">
-              <div className="bullet">
-                <DoneIcon />
-              </div>
-              <div className="stage-content">
-                <h4 className="stage-content__title">Stage 6: Grand testing</h4>
-                <ul className="stage-content__list">
-                  <li className="stage-content__item">
-                    Public AMM testing (Cardano network)
-                  </li>
-                  <li className="stage-content__item">
-                    Public Order Book testing (Cardano network)
-                  </li>
-                  <li className="stage-content__item">
-                    Bug fixes and improvements
-                  </li>
-                  <li className="stage-content__item">
-                    Stable ErgoDEX release
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-          <div className="roadmap__line" />
-        </div>
-      </section>
+      <Roadmap />
       <section>
         <h3>Team</h3>
         <StyledTeamList>
