@@ -1,0 +1,18 @@
+name: Relese
+on: 
+  push:
+    branches:
+      - "master"
+jobs:
+  deploy:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{secrets.HOST}}
+          username: ${{secrets.USERNAME}}
+          key: ${{secrets.KEY}}
+          script: source ~/.nvm/nvm.sh; cd /var/www/builds/landing; git pull origin master; yarn; yarn build;
+     
