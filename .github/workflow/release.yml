@@ -14,5 +14,5 @@ jobs:
           host: ${{secrets.HOST}}
           username: ${{secrets.USERNAME}}
           key: ${{secrets.KEY}}
-          script: source ~/.nvm/nvm.sh; cd /var/www/builds/landing; git pull origin master; yarn; yarn build;
+          script: source ~/.nvm/nvm.sh; cd /var/www/landing; git pull origin master; yarn; yarn build;
      
