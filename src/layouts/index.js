@@ -2,6 +2,7 @@ import "../styles/style.scss";
 
 import React from "react";
 
+import { CookiePolicy } from "../components/CookiePolicy";
 import Footer from "../components/footer";
 
 const Layout = ({ children }) => {
@@ -11,6 +12,7 @@ const Layout = ({ children }) => {
         <div className="container">{children}</div>
       </main>
       <Footer />
+      <CookiePolicy />
     </div>
   );
 };
