@@ -1,0 +1,45 @@
+.cookie-policy {
+  background: #000;
+  bottom: 0;
+  color: #768595;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 22px;
+  min-height: 170px;
+  padding: 1rem;
+  position: fixed;
+  right: 0;
+  transition: opacity .3s, visibility .3s;
+  width: 100%;
+  z-index: 1000;
+
+
+  @media (min-width: 600px) {
+    bottom: 2rem;
+    right: 2rem;
+    width: 592px;
+  }
+
+  &_hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__header {
+    margin-bottom: 1rem;
+  }
+
+  &__message {
+    margin-bottom: 1rem;
+  }
+
+  &__button {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+}
+
