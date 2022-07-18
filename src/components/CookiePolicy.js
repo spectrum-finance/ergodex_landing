@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from 'react'
 
 const COOKIE_POLICY_KEY = "site-cookie-policy";
 
 export const CookiePolicy = () => {
-  const [hidden, setHidden] = useState(localStorage.getItem(COOKIE_POLICY_KEY));
+  // 'accept' as default to remove blinking
+  const [hidden, setHidden] = useState("accept");
+
+  useEffect(() => {
+    setHidden(localStorage.getItem(COOKIE_POLICY_KEY))
+  }, []);
 
   const reject = () => {
     localStorage.setItem(COOKIE_POLICY_KEY, "reject");
