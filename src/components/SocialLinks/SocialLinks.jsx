@@ -63,7 +63,7 @@ const SocialLinks = () => {
       </li>
       <li className="social-item">
         <a
-          href="https://discord.gg/6MFFG4Fn4Y"
+          href="https://discord.gg/zY2gmTYQVD"
           target="_blank"
           className="social-link"
           rel="noreferrer"
